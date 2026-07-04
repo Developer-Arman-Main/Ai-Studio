@@ -79,15 +79,19 @@ export default function AdminPanel({
   });
 
   useEffect(() => {
-    const sessionAuth = localStorage.getItem("aistudio_admin_logged");
-    if (sessionAuth === "true") {
-      setIsLoggedIn(true);
+    if (isOpen) {
+      const sessionAuth = localStorage.getItem("aistudio_admin_logged");
+      setIsLoggedIn(sessionAuth === "true");
+      // Reset inputs & errors for a clean experience
+      setLoginError("");
+      setUsername("");
+      setPassword("");
     }
-  }, []);
+  }, [isOpen]);
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (username === "Arman" && password === "Arman@1905") {
+    if (username.trim().toLowerCase() === "arman" && password === "Arman@1905") {
       setIsLoggedIn(true);
       setLoginError("");
       localStorage.setItem("aistudio_admin_logged", "true");
@@ -243,7 +247,7 @@ export default function AdminPanel({
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     className="w-full px-4 py-3 bg-neutral-950 border border-white/5 rounded-xl text-xs text-white focus:outline-none focus:border-primary-gold"
-                    placeholder="e.g. Arman"
+                    placeholder="Enter username"
                   />
                 </div>
 
@@ -257,7 +261,7 @@ export default function AdminPanel({
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full px-4 py-3 bg-neutral-950 border border-white/5 rounded-xl text-xs text-white focus:outline-none focus:border-primary-gold"
-                    placeholder="e.g. Arman@1905"
+                    placeholder="••••••••"
                   />
                 </div>
 

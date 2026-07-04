@@ -96,7 +96,7 @@ export default function App() {
     }
   }, [darkMode]);
 
-  // Listen for the secret key command: Ctrl + Alt + A
+  // Listen for the secret key command: Ctrl + Alt + A (using Capture phase for absolute global reliability)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.altKey && (e.key === "a" || e.key === "A" || e.code === "KeyA")) {
@@ -104,8 +104,8 @@ export default function App() {
         setIsAdminOpen((prev) => !prev);
       }
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown, true);
+    return () => window.removeEventListener("keydown", handleKeyDown, true);
   }, []);
 
   const handleSelectPackage = (pkgName: string) => {

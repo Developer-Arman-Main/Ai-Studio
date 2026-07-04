@@ -66,6 +66,19 @@ export default function Navbar({ darkMode, toggleDarkMode, openLoginModal }: Nav
           {/* Logo */}
           <a
             href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              // Triple-tap or triple-click the logo to open the admin environment
+              const now = Date.now();
+              const clicks = (e.currentTarget as any)._clicks || [];
+              const validClicks = clicks.filter((t: number) => now - t < 1000);
+              validClicks.push(now);
+              (e.currentTarget as any)._clicks = validClicks;
+              if (validClicks.length >= 3) {
+                openLoginModal();
+                (e.currentTarget as any)._clicks = [];
+              }
+            }}
             className="flex items-center space-x-2 group focus:outline-none"
           >
             <div className="flex flex-col">
