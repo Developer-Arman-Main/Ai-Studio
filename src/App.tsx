@@ -96,10 +96,10 @@ export default function App() {
     }
   }, [darkMode]);
 
-  // Listen for the secret key command: Ctrl + Shift + A
+  // Listen for the secret key command: Ctrl + Alt + A
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "a") {
+      if (e.ctrlKey && e.altKey && (e.key === "a" || e.key === "A" || e.code === "KeyA")) {
         e.preventDefault();
         setIsAdminOpen((prev) => !prev);
       }

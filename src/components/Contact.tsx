@@ -117,7 +117,7 @@ export default function Contact({ selectedPackage, onNewSubmission }: ContactPro
   };
 
   return (
-    <section id="contact" className="py-24 bg-neutral-950 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-luxury-bg-7 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative overflow-hidden">
       {/* Visual Accents */}
       <div className="absolute bottom-10 left-10 w-96 h-96 rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 

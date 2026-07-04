@@ -55,7 +55,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
   };
 
   return (
-    <section id="testimonials" className="py-24 bg-neutral-950 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative overflow-hidden">
+    <section id="testimonials" className="py-24 bg-luxury-bg-4 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45rem] h-[45rem] rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">

@@ -17,7 +17,7 @@ export default function Services({ services }: ServicesProps) {
   );
 
   return (
-    <section id="services" className="py-24 bg-neutral-950 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
+    <section id="services" className="py-24 bg-luxury-bg-3 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
       <div className="absolute top-10 right-10 w-80 h-80 rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

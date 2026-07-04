@@ -6,7 +6,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-950 text-neutral-400 py-16 border-t border-white/5 relative">
+    <footer className="bg-luxury-bg-6 text-neutral-400 py-16 border-t border-white/5 relative">
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-primary-gold/5 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-12">

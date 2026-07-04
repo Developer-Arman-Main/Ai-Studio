@@ -18,7 +18,7 @@ export default function Portfolio({ projects }: PortfolioProps) {
       : projects.filter((p) => p.category.toLowerCase() === activeCategory.toLowerCase());
 
   return (
-    <section id="portfolio" className="py-24 bg-neutral-950 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative">
+    <section id="portfolio" className="py-24 bg-luxury-bg-5 light-theme:bg-white border-t border-white/5 light-theme:border-black/5 relative">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50rem] h-[50rem] rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

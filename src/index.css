@@ -12,6 +12,16 @@
   --color-luxury-dark: #050505;
   --color-luxury-glass: rgba(10, 10, 10, 0.8);
   --color-luxury-glass-light: rgba(255, 255, 255, 0.85);
+
+  --color-luxury-bg-1: rgba(26, 11, 46, 0.9);      /* Hero: Rich deep violet-indigo */
+  --color-luxury-bg-2: rgba(15, 28, 63, 0.9);      /* About: Rich deep ocean-sapphire */
+  --color-luxury-bg-3: rgba(28, 14, 43, 0.9);      /* Services & Process: Deep imperial amethyst */
+  --color-luxury-bg-4: rgba(10, 36, 36, 0.9);      /* WhyChooseUs & Testimonials: Elegant deep emerald-teal */
+  --color-luxury-bg-5: rgba(34, 12, 30, 0.9);      /* Portfolio: Luxurious deep burgundy-plum */
+  --color-luxury-bg-6: rgba(15, 21, 45, 0.9);      /* Packages & Footer: Deep midnight sapphire */
+  --color-luxury-bg-7: rgba(26, 8, 34, 0.9);       /* Contact: Rich deep orchid-amethyst */
+  --color-luxury-card: rgba(255, 255, 255, 0.04);  /* Premium translucent card */
+  --color-luxury-card-alt: rgba(255, 255, 255, 0.08); /* Highlighted card */
 }
 
 /* Custom styles and smooth scroll behavior */
@@ -21,7 +31,15 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #050505; /* Deep Editorial Black background */
+  background-color: #0b0718; /* Rich, colorful deep midnight violet base */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.12) 0px, transparent 50%);
+  background-attachment: fixed;
+  background-size: cover;
   color: #F5F5F5; /* Elegant Editorial off-white text */
   overflow-x: hidden;
   transition: background-color 0.5s ease, color 0.5s ease;
@@ -68,8 +86,8 @@ body.light-theme {
 
 .glass-card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(197, 168, 128, 0.1);
-  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.2), 0 0 15px rgba(236, 72, 153, 0.1);
+  border-color: rgba(236, 72, 153, 0.25);
 }
 
 .light-theme .glass-card-hover:hover {
@@ -84,7 +102,7 @@ body.light-theme {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  background: #0b0718;
 }
 
 .light-theme ::-webkit-scrollbar-track {
@@ -92,7 +110,7 @@ body.light-theme {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1A1A1A;
+  background: #25164d;
   border-radius: 3px;
 }
 
@@ -101,7 +119,7 @@ body.light-theme {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2D2D2D;
+  background: #3c247c;
 }
 
 .light-theme ::-webkit-scrollbar-thumb:hover {
@@ -110,7 +128,7 @@ body.light-theme {
 
 /* Glowing & Text Effects for Editorial Aesthetic */
 .glow-accent {
-  box-shadow: 0 0 40px rgba(255, 255, 255, 0.04);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.15);
 }
 
 .light-theme .glow-accent {
@@ -126,7 +144,7 @@ body.light-theme {
 }
 
 .text-reveal {
-  background: linear-gradient(to right, #FFFFFF 20%, #888888 100%);
+  background: linear-gradient(to right, #ffffff 10%, #ffd700 45%, #ff8da1 75%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

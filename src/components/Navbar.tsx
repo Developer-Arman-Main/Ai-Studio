@@ -58,7 +58,7 @@ export default function Navbar({ darkMode, toggleDarkMode, openLoginModal }: Nav
       <header
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           scrolled
-            ? "py-4 bg-neutral-950/80 light-theme:bg-white/80 backdrop-blur-md shadow-lg border-b border-white/5 light-theme:border-black/5"
+            ? "py-4 bg-neutral-950/30 glass backdrop-blur-md shadow-lg border-b border-white/5 light-theme:bg-white/80 light-theme:border-black/5"
             : "py-6 bg-transparent"
         }`}
       >
@@ -67,10 +67,6 @@ export default function Navbar({ darkMode, toggleDarkMode, openLoginModal }: Nav
           <a
             href="#"
             className="flex items-center space-x-2 group focus:outline-none"
-            onDoubleClick={() => {
-              // Secret double click fallback for mobile/tablet presentation to access login
-              openLoginModal();
-            }}
           >
             <div className="flex flex-col">
               <span className="font-serif font-bold italic text-2xl sm:text-3xl tracking-tighter text-white light-theme:text-neutral-900 uppercase group-hover:text-primary-gold transition-colors duration-300">
@@ -104,16 +100,6 @@ export default function Navbar({ darkMode, toggleDarkMode, openLoginModal }: Nav
               aria-label="Toggle Theme"
             >
               {darkMode ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-
-            {/* Secret Login Trigger */}
-            <button
-              onClick={openLoginModal}
-              className="p-2 rounded-full border border-neutral-800 hover:border-primary-gold hover:text-primary-gold transition-all duration-300"
-              style={{ display: "none" }} /* completely hidden */
-              aria-hidden="true"
-            >
-              <Lock size={18} />
             </button>
 
             {/* Premium CTA Button */}
@@ -156,7 +142,7 @@ export default function Navbar({ darkMode, toggleDarkMode, openLoginModal }: Nav
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 top-[72px] bg-neutral-950/98 light-theme:bg-white/98 backdrop-blur-lg z-30 lg:hidden flex flex-col justify-between p-8"
+            className="fixed inset-0 top-[72px] bg-[#0b0718]/95 backdrop-blur-lg z-30 lg:hidden flex flex-col justify-between p-8"
           >
             <nav className="flex flex-col space-y-6 pt-10">
               {navLinks.map((link, idx) => (

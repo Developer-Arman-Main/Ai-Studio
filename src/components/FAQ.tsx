@@ -15,7 +15,7 @@ export default function FAQ({ faqs }: FAQProps) {
   };
 
   return (
-    <section id="faq" className="py-24 bg-neutral-950 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
+    <section id="faq" className="py-24 bg-luxury-bg-3 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
       <div className="absolute top-1/2 left-10 w-80 h-80 rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-3xl mx-auto px-6 relative z-10">

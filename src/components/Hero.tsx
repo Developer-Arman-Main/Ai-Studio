@@ -3,7 +3,7 @@ import { ArrowUpRight, Monitor, Zap, Award } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-neutral-950 light-theme:bg-neutral-50">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden bg-luxury-bg-1 light-theme:bg-neutral-50">
       {/* Immersive Animated Gradient Background */}
       <div className="absolute inset-0 z-0 opacity-40">
         <div className="absolute top-1/4 left-1/4 w-[35rem] h-[35rem] rounded-full bg-radial-gradient from-primary-gold/15 to-transparent blur-3xl animate-pulse" style={{ animationDuration: "8s" }} />

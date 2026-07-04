@@ -9,7 +9,7 @@ interface PackagesProps {
 
 export default function Packages({ packages, onSelectPackage }: PackagesProps) {
   return (
-    <section id="packages" className="py-24 bg-neutral-950 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
+    <section id="packages" className="py-24 bg-luxury-bg-6 light-theme:bg-neutral-50 border-t border-white/5 light-theme:border-black/5 relative">
       <div className="absolute top-1/2 right-10 w-96 h-96 rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -37,7 +37,7 @@ export default function Packages({ packages, onSelectPackage }: PackagesProps) {
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className={`relative p-8 rounded-3xl glass flex flex-col justify-between h-full hover:scale-[1.01] transition-all duration-300 ${
                 pkg.isPopular
-                  ? "border-primary-gold/40 shadow-xl"
+                  ? "border-primary-gold/60 shadow-xl glow-accent"
                   : ""
               }`}
             >

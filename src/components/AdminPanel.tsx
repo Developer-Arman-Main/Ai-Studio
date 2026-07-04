@@ -199,10 +199,10 @@ export default function AdminPanel({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/90 backdrop-blur-lg">
-      <div className="w-full max-w-6xl h-[85vh] bg-neutral-900 border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-neutral-950/80 backdrop-blur-xl">
+      <div className="w-full max-w-6xl h-[85vh] bg-[#120822]/95 backdrop-blur-2xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl flex flex-col glow-accent">
         {/* Header bar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-neutral-950/50">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5 bg-[#0b0416]/60">
           <div className="flex items-center space-x-2">
             <Lock className="text-primary-gold" size={16} />
             <span className="font-display font-bold text-xs uppercase tracking-widest text-white">
@@ -362,8 +362,57 @@ export default function AdminPanel({
               </div>
 
               {/* Central Tab Content Pane */}
-              <div className="flex-grow p-6 overflow-y-auto">
-                {activeTab === "submissions" && (
+              <div className="flex-grow p-6 overflow-y-auto flex flex-col space-y-6">
+                
+                {/* Analytics Cards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {/* Card 1 */}
+                  <div className="p-4 rounded-2xl bg-neutral-950/40 border border-white/5 glass flex items-center space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary-gold/10 text-primary-gold flex items-center justify-center border border-primary-gold/20">
+                      <MessageSquareQuote size={18} />
+                    </div>
+                    <div>
+                      <span className="block text-[9px] font-mono uppercase tracking-wider text-neutral-400">Total Proposals</span>
+                      <span className="text-xl font-serif font-light text-white leading-none">{submissions.length}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Card 2 */}
+                  <div className="p-4 rounded-2xl bg-neutral-950/40 border border-white/5 glass flex items-center space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+                      <Briefcase size={18} />
+                    </div>
+                    <div>
+                      <span className="block text-[9px] font-mono uppercase tracking-wider text-neutral-400">Portfolio Cards</span>
+                      <span className="text-xl font-serif font-light text-white leading-none">{projects.length}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Card 3 */}
+                  <div className="p-4 rounded-2xl bg-neutral-950/40 border border-white/5 glass flex items-center space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center border border-indigo-500/20">
+                      <Sparkles size={18} />
+                    </div>
+                    <div>
+                      <span className="block text-[9px] font-mono uppercase tracking-wider text-neutral-400">Testimonials</span>
+                      <span className="text-xl font-serif font-light text-white leading-none">{testimonials.length}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Card 4 */}
+                  <div className="p-4 rounded-2xl bg-neutral-950/40 border border-white/5 glass flex items-center space-x-4">
+                    <div className="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+                      <Layers size={18} />
+                    </div>
+                    <div>
+                      <span className="block text-[9px] font-mono uppercase tracking-wider text-neutral-400">Services Active</span>
+                      <span className="text-xl font-serif font-light text-white leading-none">{services.length}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex-grow">
+                  {activeTab === "submissions" && (
                   <div className="space-y-6">
                     <div className="space-y-1">
                       <h3 className="font-display font-bold text-lg text-white">Contact & Package Inquiries Layout</h3>
@@ -723,7 +772,9 @@ export default function AdminPanel({
                     </div>
                   </div>
                 )}
+                {/* Tab Services End */}
               </div>
+            </div>
             </div>
           )}
         </div>

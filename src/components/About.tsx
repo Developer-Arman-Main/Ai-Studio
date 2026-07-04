@@ -3,7 +3,7 @@ import { Mail, Instagram, ArrowUpRight, Award, Flame, Star, Sparkles } from "luc
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-neutral-950 light-theme:bg-white relative overflow-hidden border-t border-white/5 light-theme:border-black/5">
+    <section id="about" className="py-24 bg-luxury-bg-2 light-theme:bg-white relative overflow-hidden border-t border-white/5 light-theme:border-black/5">
       {/* Decorative Radial Backdrop */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] rounded-full bg-radial-gradient from-primary-gold/5 to-transparent blur-3xl pointer-events-none" />
 
@@ -24,19 +24,19 @@ export default function About() {
               {/* Outer Golden Glow border */}
               <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-white/10 via-white/5 to-transparent opacity-30 group-hover:opacity-50 blur transition duration-1000" />
 
-              <div className="relative rounded-2xl overflow-hidden bg-neutral-900 border border-white/5 max-w-[340px] shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden bg-[#1c1435]/60 border border-white/5 max-w-[340px] shadow-2xl glass">
                 {/* Premium Monogram Logo representing Aistudio and Founder Arman */}
-                <div className="relative aspect-[3/4] bg-neutral-950 flex flex-col justify-end p-6">
+                <div className="relative aspect-[3/4] bg-[#130b25]/60 flex flex-col justify-end p-6">
                   <img
                     src="../assets/images/aistudio_logo_colorful_1783194363826.jpg"
                     alt="Arman - Founder & Architect of Aistudio"
                     className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#130b25] via-[#130b25]/40 to-transparent" />
 
                   <div className="relative z-10 space-y-1">
-                    <span className="text-[9px] font-mono uppercase text-primary-gold tracking-[0.2em] font-bold">Founder / Architect</span>
+                     <span className="text-[9px] font-mono uppercase text-primary-gold tracking-[0.2em] font-bold">Founder / Architect</span>
                     <h3 className="font-serif font-bold text-2xl text-white">Arman</h3>
                     <p className="text-xs text-neutral-400">Pioneering luxury web designs that transform businesses into household brands.</p>
                   </div>
@@ -44,7 +44,7 @@ export default function About() {
               </div>
 
               {/* Float Experience Badge */}
-              <div className="absolute -bottom-4 -right-4 bg-neutral-950 border border-white/10 p-4 rounded-xl shadow-lg flex items-center space-x-2">
+              <div className="absolute -bottom-4 -right-4 bg-[#150e2d]/90 border border-white/10 p-4 rounded-xl shadow-lg flex items-center space-x-2 glass">
                 <div className="w-2 h-2 rounded-full bg-primary-gold" />
                 <span className="text-[9px] font-mono tracking-widest text-white uppercase font-bold">100% Handcrafted</span>
               </div>
